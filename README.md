@@ -22,5 +22,6 @@ chaque fonctionnalité est développée  dans une branche séparée :
 - feature/Contact
 - feature/style
 - feature/javascript
+  
 Chaque branche fait l’objet d’une **Pull Request**, avec un reviewer assigné.
 
