@@ -15,13 +15,15 @@ Ce projet est mini-portfolio réalisé dans le cadre de mon stage .Il présente 
 
 ## Organisation Git :
 chaque fonctionnalité est développée  dans une branche séparée :
-- feature/ structure
-- feature/ Acceuil
-- feature/ à propos de moi
+
+- feature/structure
+- feature/accueil (inclut la partie "À propos de moi")
 - feature/projets
-- feature/Contact
+- feature/competences
+- feature/contact
 - feature/style
 - feature/javascript
+
   
 Chaque branche fait l’objet d’une **Pull Request**, avec un reviewer assigné.
 
