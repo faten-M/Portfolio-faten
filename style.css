@@ -1,0 +1,254 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+    color: #2d3436;
+    overflow-x: hidden;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    padding: 1.2rem 0;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+}
+
+nav .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2d3436;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    transform: translateX(-50%) scaleX(0);
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover::before {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* MENU BURGER */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 2px;
+    background: #0a0e27;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    color: #0a0e27;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: #636e72;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: #0a0e27;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.cta-button:hover {
+    background: transparent;
+    color: #0a0e27;
+    border: 2px solid #0a0e27;
+}
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        padding: 2rem;
+        gap: 1.5rem;
+        transition: 0.4s ease;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+}
+/* SECTION PROJETS */
+#projets {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#projets h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-align: center;
+    color: #0a0e27;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+#projets h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* GRID */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+/* CARD */
+.project-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+}
+
+/* IMAGE / NUMÉRO */
+.project-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+}
+
+/* CONTENU */
+.project-content {
+    padding: 2rem;
+}
+
+.project-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #0a0e27;
+}
+
+.project-content p {
+    color: #636e72;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+/* TAGS */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    padding: 0.4rem 1rem;
+    background: #f8f9fa;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #2d3436;
+    font-weight: 500;
+}
+
